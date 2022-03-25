@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: gmall-coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+#        file-extension: yml
+        namespace: f0d64a96-1903-455b-9d3d-b14dfdb4a6dd

@@ -10,7 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  *
  */
-@EnableCaching
 @EnableFeignClients(basePackages = "com.lcb.gmall.product.feign")
 @EnableDiscoveryClient
 @MapperScan("com.lcb.gmall.product.dao")

@@ -9,9 +9,9 @@ import java.util.Map;
 /**
  * 库存工作单
  *
- * @author lcb
- * @email 2990024235@qq.com
- * @date 2022-03-22 15:56:47
+ * @author leifengyang
+ * @email leifengyang@gmail.com
+ * @date 2019-10-08 09:59:40
  */
 public interface WareOrderTaskService extends IService<WareOrderTaskEntity> {
 

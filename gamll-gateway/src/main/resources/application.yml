@@ -1,0 +1,47 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product_route
+          uri: lb://gmall-product
+          predicates:
+                - Path=/api/product/**,/hello
+          filters:
+                - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: third_party_route
+          uri: lb://gmall-third-party
+          predicates:
+            - Path=/api/thirdparty/**
+          filters:
+            - RewritePath=/api/thirdparty/(?<segment>.*),/$\{segment}
+
+        - id: member_route
+          uri: lb://gmall-member
+          predicates:
+            - Path=/api/member/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: ware_route
+          uri: lb://gmall-ware
+          predicates:
+            - Path=/api/ware/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+
+
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+        - id: gmall_host_route
+          uri: lb://gmall-product
+          predicates:
+            - Host=**.gmall.com,gmall.com
+
+##前端项目，/api

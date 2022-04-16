@@ -3,6 +3,10 @@ package com.lcb.gmall.ware.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.lcb.common.utils.PageUtils;
+import com.lcb.common.utils.R;
+import com.lcb.gmall.ware.entity.PurchaseDetailEntity;
+import com.lcb.gmall.ware.service.PurchaseDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,19 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lcb.gmall.ware.entity.PurchaseDetailEntity;
-import com.lcb.gmall.ware.service.PurchaseDetailService;
-import com.lcb.common.utils.PageUtils;
-import com.lcb.common.utils.R;
-
-
 
 /**
  * 
  *
- * @author lcb
- * @email 2990024235@qq.com
- * @date 2022-03-22 15:56:47
+ * @author leifengyang
+ * @email leifengyang@gmail.com
+ * @date 2019-11-17 13:50:10
  */
 @RestController
 @RequestMapping("ware/purchasedetail")

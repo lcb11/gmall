@@ -19,7 +19,8 @@
         <module>renren-fast</module>
         <module>renren-generator</module>
         <module>gmall-common</module>
-        <module>gmall-gateway</module>
+        <module>gamll-gateway</module>
+        <module>gmall-search</module>
     </modules>
 
 

@@ -42,6 +42,25 @@ spring:
         - id: gmall_host_route
           uri: lb://gmall-product
           predicates:
-            - Host=**.gmall.com,gmall.com
+            - Host=gmall.com,item.gmall.com
 
+        - id: gmall_search_route
+          uri: lb://gmall-search
+          predicates:
+            - Host=search.gmall.com
+
+        - id: gmall_cart_route
+          uri: lb://gmall-cart
+          predicates:
+            - Host=cart.gmall.com
+
+        - id: gmall_order_route
+          uri: lb://gmall-order
+          predicates:
+            - Host=order.gmall.com
+
+        - id: gmall_auth_route
+          uri: lb://gmall-auth-server
+          predicates:
+            - Host=auth.gmall.com
 ##前端项目，/api

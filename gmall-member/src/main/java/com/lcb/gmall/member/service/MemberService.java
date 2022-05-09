@@ -3,6 +3,11 @@ package com.lcb.gmall.member.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lcb.common.utils.PageUtils;
 import com.lcb.gmall.member.entity.MemberEntity;
+import com.lcb.gmall.member.exception.PhoneExsitException;
+import com.lcb.gmall.member.exception.UsernameExistException;
+import com.lcb.gmall.member.vo.MemberLoginVo;
+import com.lcb.gmall.member.vo.MemberRegistVo;
+import com.mysql.cj.jdbc.exceptions.PacketTooBigException;
 
 import java.util.Map;
 
@@ -16,5 +21,13 @@ import java.util.Map;
 public interface MemberService extends IService<MemberEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    void regist(MemberRegistVo vo);
+
+    void checkPhoneUnique(String phone) throws PhoneExsitException;
+
+    void checkUsernameUnique(String username) throws UsernameExistException;
+
+    MemberEntity login(MemberLoginVo vo);
 }
 

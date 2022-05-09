@@ -1,19 +1,20 @@
 package com.lcb.gmall.gmall.product;
 
+import com.lcb.gmall.product.dao.AttrGroupDao;
+import com.lcb.gmall.product.dao.SkuSaleAttrValueDao;
 import com.lcb.gmall.product.service.BrandService;
 import com.lcb.gmall.product.service.CategoryService;
+import com.lcb.gmall.product.vo.SkuItemSaleAttrVo;
+import com.lcb.gmall.product.vo.SpuItemAttrGroupVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.junit4.SpringRunner;
-
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.UUID;
 
 @Slf4j
@@ -31,6 +32,24 @@ public class GmallProductApplicationTests {
     @Autowired
     RedissonClient redissonClient;
 
+    @Resource
+    private AttrGroupDao attrGroupDao;
+
+    @Resource
+    private SkuSaleAttrValueDao skuSaleAttrValueDao;
+
+
+
+    @Test
+    public void test1() {
+        List<SkuItemSaleAttrVo> saleAttrBySpuId = skuSaleAttrValueDao.getSaleAttrsBySpuId(13L);
+        System.out.println(saleAttrBySpuId);
+    }
+    @Test
+    public void test() {
+        List<SpuItemAttrGroupVo> attrGroupWithAttrsBySpuId = attrGroupDao.getAttrGroupWithAttrsBySpuId(13L, 225L);
+        System.out.println(attrGroupWithAttrsBySpuId);
+    }
 
 
     @Test

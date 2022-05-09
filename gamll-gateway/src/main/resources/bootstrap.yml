@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gmall-coupon
+    name: gamll-gateway
   cloud:
     nacos:
       discovery:

@@ -9,6 +9,11 @@ spring:
       oss:
         endpoint: oss-cn-beijing.aliyuncs.com
         bucket: gmall-lcb
+      sms:
+        host: https://dfsns.market.alicloudapi.com
+        path: /data/send_sms
+        template_id: TPL_0000
+        appcode: 1689c0dff9d34163aca516b53b8b7171
 
   application:
     name: gmall-third-party

@@ -3,21 +3,22 @@ package com.lcb.gmall.ware.controller;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+
+import com.lcb.common.exception.BizCodeEnume;
+import com.lcb.common.exception.NoStockException;
 import com.lcb.common.utils.PageUtils;
 import com.lcb.common.utils.R;
 import com.lcb.gmall.ware.entity.WareSkuEntity;
 import com.lcb.gmall.ware.service.WareSkuService;
+import com.lcb.gmall.ware.vo.LockStockResult;
 import com.lcb.gmall.ware.vo.SkuHasStockVo;
+import com.lcb.gmall.ware.vo.WareSkuLockVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
 /**
  * 商品库存
- *
- * @author leifengyang
- * @email leifengyang@gmail.com
- * @date 2019-10-08 09:59:40
  */
 @RestController
 @RequestMapping("ware/waresku")
@@ -25,6 +26,15 @@ public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
 
+    @PostMapping("/lock/order")
+    public R orderLockStock(@RequestBody WareSkuLockVo vo){
+        try{
+            Boolean stock=wareSkuService.orderLockStock(vo);
+            return R.ok();
+        }catch (NoStockException e){
+            return R.error(BizCodeEnume.NO_STOCK_EXCEPTION.getCode(),BizCodeEnume.NO_STOCK_EXCEPTION.getMessage());
+        }
+    }
 
     //查询sku是否有库存
     @PostMapping("/hasstock")

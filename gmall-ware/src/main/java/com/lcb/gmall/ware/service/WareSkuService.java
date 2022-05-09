@@ -3,7 +3,9 @@ package com.lcb.gmall.ware.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lcb.common.utils.PageUtils;
 import com.lcb.gmall.ware.entity.WareSkuEntity;
+import com.lcb.gmall.ware.vo.LockStockResult;
 import com.lcb.gmall.ware.vo.SkuHasStockVo;
+import com.lcb.gmall.ware.vo.WareSkuLockVo;
 
 import java.util.List;
 import java.util.Map;
@@ -23,5 +25,7 @@ public interface WareSkuService extends IService<WareSkuEntity> {
 
 
     List<SkuHasStockVo> getSkusHasStock(List<Long> skuIds);
+
+    Boolean orderLockStock(WareSkuLockVo vo);
 }
 

@@ -1,7 +1,7 @@
 package com.lcb.gmall.auth.server;
 
 
-import com.lcb.gmall.auth.server.util.HttpUtils;
+import com.lcb.common.utils.HttpUtils;
 import org.apache.http.HttpResponse;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

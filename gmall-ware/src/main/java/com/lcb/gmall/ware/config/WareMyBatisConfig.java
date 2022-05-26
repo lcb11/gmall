@@ -2,7 +2,6 @@ package com.lcb.gmall.ware.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.zaxxer.hikari.HikariDataSource;
-import io.seata.rm.datasource.DataSourceProxy;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -29,7 +28,7 @@ public class WareMyBatisConfig {
         return paginationInterceptor;
     }
 
-    @Autowired
+   /* @Autowired
     DataSourceProperties dataSourceProperties;
 
     @Bean
@@ -40,5 +39,5 @@ public class WareMyBatisConfig {
             dataSource.setPoolName(dataSourceProperties.getName());
         }
         return new DataSourceProxy(dataSource);
-    }
+    }*/
 }

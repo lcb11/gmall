@@ -1,11 +1,9 @@
 package com.lcb.gmall.cart.controller;
 
 
-import com.lcb.gmall.cart.interceptor.CartInterceptor;
 import com.lcb.gmall.cart.service.CartService;
 import com.lcb.gmall.cart.vo.Cart;
 import com.lcb.gmall.cart.vo.CartItem;
-import com.lcb.gmall.cart.vo.UserInfoTo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.jws.WebParam;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 

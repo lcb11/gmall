@@ -12,7 +12,7 @@ public class MemberResVo implements Serializable {
 
     private static final long serialVersionUID = 5573669251256409786L;
 
-    private Long MemberId=123456L;
+    private Long MemberId;
     /**
      * 会员等级id
      */

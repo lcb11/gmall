@@ -7,6 +7,7 @@ import com.lcb.gmall.member.exception.PhoneExsitException;
 import com.lcb.gmall.member.exception.UsernameExistException;
 import com.lcb.gmall.member.vo.MemberLoginVo;
 import com.lcb.gmall.member.vo.MemberRegistVo;
+import com.lcb.gmall.member.vo.SocialUser;
 import com.mysql.cj.jdbc.exceptions.PacketTooBigException;
 
 import java.util.Map;
@@ -29,5 +30,9 @@ public interface MemberService extends IService<MemberEntity> {
     void checkUsernameUnique(String username) throws UsernameExistException;
 
     MemberEntity login(MemberLoginVo vo);
+
+    MemberEntity login(SocialUser vo) throws Exception;
+
+    MemberEntity login(String vo);
 }
 

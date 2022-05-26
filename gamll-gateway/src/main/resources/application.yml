@@ -30,6 +30,14 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>.*),/$\{segment}
 
+        - id: coupon_route
+          uri: lb://gmall-coupon
+          predicates:
+            - Path=/api/coupon/**,/hello
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+
 
 
         - id: admin_route
@@ -63,4 +71,14 @@ spring:
           uri: lb://gmall-auth-server
           predicates:
             - Host=auth.gmall.com
+
+        - id: gmall_member_route
+          uri: lb://gmall-member
+          predicates:
+            - Host=member.gmall.com
+
+        - id: gmall_seckill_route
+          uri: lb://gmall-seckill
+          predicates:
+            - Host=seckill.gmall.com
 ##前端项目，/api

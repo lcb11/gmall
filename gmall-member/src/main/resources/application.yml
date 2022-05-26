@@ -10,6 +10,9 @@ spring:
         server-addr: 127.0.0.1:8848
   application:
     name: gmall-member
+  redis:
+    host: 192.168.248.135
+    port: 6379
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -19,4 +22,6 @@ mybatis-plus:
 
 server:
   port: 8000
+
+
 

@@ -41,5 +41,7 @@ public class SkuItemVo {
 
     //6、秒杀商品的优惠信息
     private SeckillSkuVo seckillSkuVo;
+    //当前商品的秒杀优惠信息
+    SeckillInfoVo seckillInfo;
 
 }

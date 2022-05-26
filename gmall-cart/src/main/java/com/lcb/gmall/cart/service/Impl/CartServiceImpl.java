@@ -2,15 +2,14 @@ package com.lcb.gmall.cart.service.Impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.lcb.common.utils.R;
 import com.lcb.gmall.cart.feign.ProductFeignService;
 import com.lcb.gmall.cart.interceptor.CartInterceptor;
 import com.lcb.gmall.cart.service.CartService;
+import com.lcb.gmall.cart.to.UserInfoTo;
 import com.lcb.gmall.cart.vo.Cart;
 import com.lcb.gmall.cart.vo.CartItem;
 import com.lcb.gmall.cart.vo.SkuInfoVo;
-import com.lcb.gmall.cart.vo.UserInfoTo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -111,7 +110,7 @@ public class CartServiceImpl implements CartService {
             //1、登录状态
             String cartKey =CART_PREFIX+ userInfoTo.getUserId();
             //1、如果临时购物车还没合并
-            String tempCartKey=CART_PREFIX + userInfoTo.getUserkey();
+            String tempCartKey=CART_PREFIX + userInfoTo.getUserKey();
             List<CartItem> tempCartItems = getCartItems(tempCartKey);
             if(tempCartItems!=null){
                 //临时购物车有数据
@@ -126,7 +125,7 @@ public class CartServiceImpl implements CartService {
             cart.setItems(cartItems);
         }else {
             //没登录
-            String cartkey =CART_PREFIX+ userInfoTo.getUserkey();
+            String cartkey =CART_PREFIX+ userInfoTo.getUserKey();
             BoundHashOperations<String, Object, Object> hashOps = redisTemplate.boundHashOps(cartkey);
             List<Object> values = hashOps.values();
             if(values!=null&&values.size()>0){
@@ -157,7 +156,7 @@ public class CartServiceImpl implements CartService {
         if(userInfoTo.getUserId()!=null){
             cartkey=CART_PREFIX+userInfoTo.getUserId();
         }else {
-            cartkey=CART_PREFIX+userInfoTo.getUserkey();
+            cartkey=CART_PREFIX+userInfoTo.getUserKey();
         }
 
         BoundHashOperations<String, Object, Object> operations = redisTemplate.boundHashOps(cartkey);

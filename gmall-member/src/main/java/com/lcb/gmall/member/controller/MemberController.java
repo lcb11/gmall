@@ -9,6 +9,7 @@ import com.lcb.gmall.member.exception.UsernameExistException;
 import com.lcb.gmall.member.feign.CouponFeignService;
 import com.lcb.gmall.member.vo.MemberLoginVo;
 import com.lcb.gmall.member.vo.MemberRegistVo;
+import com.lcb.gmall.member.vo.SocialUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,7 +50,7 @@ public class MemberController {
     public R login(@RequestBody MemberLoginVo vo){
         MemberEntity entity=memberService.login(vo);
         if(entity!=null){
-            return R.ok();
+            return R.ok().setData(entity);
         }else {
             return R.error(BizCodeEnume.LOGINACCT_PASSWORD_EXCEPTION.getCode(),BizCodeEnume.LOGINACCT_PASSWORD_EXCEPTION.getMessage());
         }
@@ -67,6 +68,29 @@ public class MemberController {
         }
 
        return R.ok();
+    }
+
+    @PostMapping(value = "/oauth2/login")
+    public R oauthLogin(@RequestBody SocialUser socialUser) throws Exception {
+
+        MemberEntity memberEntity = memberService.login(socialUser);
+
+        if (memberEntity != null) {
+            return R.ok().setData(memberEntity);
+        } else {
+            return R.error(BizCodeEnume.LOGINACCT_PASSWORD_EXCEPTION.getCode(),BizCodeEnume.LOGINACCT_PASSWORD_EXCEPTION.getMessage());
+        }
+    }
+
+    @PostMapping(value = "/weixin/login")
+    public R weixinLogin(@RequestParam("accessTokenInfo") String accessTokenInfo) {
+
+        MemberEntity memberEntity = memberService.login(accessTokenInfo);
+        if (memberEntity != null) {
+            return R.ok().setData(memberEntity);
+        } else {
+            return R.error(BizCodeEnume.LOGINACCT_PASSWORD_EXCEPTION.getCode(),BizCodeEnume.LOGINACCT_PASSWORD_EXCEPTION.getMessage());
+        }
     }
 
     /**

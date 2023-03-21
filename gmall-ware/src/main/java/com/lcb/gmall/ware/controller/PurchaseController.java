@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * 采购信息
- *
- * @author leifengyang
- * @email leifengyang@gmail.com
- * @date 2019-11-17 13:50:10
  */
 @RestController
 @RequestMapping("ware/purchase")

@@ -10,10 +10,6 @@ import lombok.Data;
 
 /**
  * 采购信息
- * 
- * @author leifengyang
- * @email leifengyang@gmail.com
- * @date 2019-11-17 13:50:10
  */
 @Data
 @TableName("wms_purchase")

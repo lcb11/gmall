@@ -13,9 +13,6 @@ import java.util.Map;
 /**
  * 采购信息
  *
- * @author leifengyang
- * @email leifengyang@gmail.com
- * @date 2019-11-17 13:50:10
  */
 public interface PurchaseService extends IService<PurchaseEntity> {
 

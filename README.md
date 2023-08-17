@@ -30,35 +30,35 @@ gmall
 
 ### 后端技术
 
-|        技术        |           说明           |                      官网                       |
-| :----------------: | :----------------------: | :---------------------------------------------: |
-|     SpringBoot     |       容器+MVC框架       |     https://spring.io/projects/spring-boot      |
-|    SpringCloud     |        微服务架构        |     https://spring.io/projects/spring-cloud     |
-| SpringCloudAlibaba |        一系列组件        | https://spring.io/projects/spring-cloud-alibaba |
-|    MyBatis-Plus    |         ORM框架          |             https://mp.baomidou.com             |
-|  renren-generator  | 人人开源项目的代码生成器 |   https://gitee.com/renrenio/renren-generator   |
-|   Elasticsearch    |         搜索引擎         |    https://github.com/elastic/elasticsearch     |
-|      RabbitMQ      |         消息队列         |            https://www.rabbitmq.com             |
-|   Springsession    |        分布式缓存        |    https://projects.spring.io/spring-session    |
-|      Redisson      |         分布式锁         |      https://github.com/redisson/redisson       |
-|       Docker       |       应用容器引擎       |             https://www.docker.com              |
-|        OSS         |        对象云存储        |  https://github.com/aliyun/aliyun-oss-java-sdk  |
+|        技术         |                      官网                       |
+| :----------------:  | :---------------------------------------------: |
+|     SpringBoot     |    https://spring.io/projects/spring-boot      |
+|    SpringCloud     |           https://spring.io/projects/spring-cloud     |
+| SpringCloudAlibaba |                https://spring.io/projects/spring-cloud-alibaba |
+|    MyBatis-Plus    |                             https://mp.baomidou.com             |
+|  renren-generator  |    https://gitee.com/renrenio/renren-generator   |
+|   Elasticsearch    |             https://github.com/elastic/elasticsearch     |
+|      RabbitMQ      |                          https://www.rabbitmq.com             |
+|   Springsession    |                 https://projects.spring.io/spring-session    |
+|      Redisson      |                      https://github.com/redisson/redisson       |
+|       Docker       |                     https://www.docker.com              |
+|        OSS         |                 https://github.com/aliyun/aliyun-oss-java-sdk  |
 
 
 ## 环境搭建
 
 ### 开发工具
 
-|     工具      |        说明         |                      官网                       |
-| :-----------: | :-----------------: | :---------------------------------------------: |
-|     IDEA      |    开发Java程序     |     https://www.jetbrains.com/idea/download     |
-| RedisDesktop  | redis客户端连接工具 |        https://redisdesktop.com/download        |
-|  SwitchHosts  |    本地host管理     |       https://oldj.github.io/SwitchHosts        |
-|    X-shell    |  Linux远程连接工具  | http://www.netsarang.com/download/software.html |
-|    Navicat    |   数据库连接工具    |       http://www.formysql.com/xiazai.html       |
-| PowerDesigner |   数据库设计工具    |             http://powerdesigner.de             |
-|    Postman    |   API接口调试工具   |             https://www.postman.com             |
-|    Jmeter     |    性能压测工具     |            https://jmeter.apache.org            |
+|     工具      |                         官网                       |
+| :-----------: |   :---------------------------------------------: |
+|     IDEA      |             https://www.jetbrains.com/idea/download     |
+| RedisDesktop  |         https://redisdesktop.com/download        |
+|  SwitchHosts  |             https://oldj.github.io/SwitchHosts        |
+|    X-shell    |     http://www.netsarang.com/download/software.html |
+|    Navicat    |          http://www.formysql.com/xiazai.html       |
+| PowerDesigner |               http://powerdesigner.de             |
+|    Postman    |                https://www.postman.com             |
+|    Jmeter     |               https://jmeter.apache.org            |
 
 
 ### 开发环境

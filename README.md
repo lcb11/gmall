@@ -7,39 +7,6 @@
 
 谷粒商城项目是一套电商项目，包括前台商城系统以及后台管理系统，前台商城系统包括：用户登录、注册、商品搜索、商品详情、购物车、订单、秒杀活动等模块。后台管理系统包括：系统管理、商品系统、库存系统、订单系统、等模块。
 
-## 项目演示
-
-### 前台商品系统
-
-#### 首页
-
-![](https://i.loli.net/2021/02/18/HPezsS6oYxJ5yRI.png)
-
-#### 商品检索
-
-![](https://i.loli.net/2021/02/18/ki2AWeMRIxKqlVm.png)
-
-
-#### 商品详情
-
-![](https://i.loli.net/2021/02/18/B8qjpkwcT5Potzh.png)
-
-#### 购物车
-
-![](https://i.loli.net/2021/02/18/uEYqnQ2Kx7WZy1G.png)
-
-#### 结算页
-
-#### ![](https://i.loli.net/2021/02/18/T3mVbdpfqKsrNJC.png)支付
-
-
-### 后台管理系统
-
-#### 登录
-
-![](https://i.loli.net/2021/02/18/6KVEbFZMrgnUet3.png)
-
-
 ## 组织结构
 
 ```

@@ -5,7 +5,7 @@
 
 ## 项目介绍
 
-谷粒商城项目是一套电商项目，包括前台商城系统以及后台管理系统，基于 SpringCloud、SpringCloud Alibaba、MyBatis Plus实现。前台商城系统包括：用户登录、注册、商品搜索、商品详情、购物车、订单、秒杀活动等模块。后台管理系统包括：系统管理、商品系统、优惠营销、库存系统、订单系统、用户系统、内容管理等七大模块。
+谷粒商城项目是一套电商项目，包括前台商城系统以及后台管理系统，前台商城系统包括：用户登录、注册、商品搜索、商品详情、购物车、订单、秒杀活动等模块。后台管理系统包括：系统管理、商品系统、库存系统、订单系统、等模块。
 
 ## 项目演示
 
@@ -19,11 +19,6 @@
 
 ![](https://i.loli.net/2021/02/18/ki2AWeMRIxKqlVm.png)
 
-#### 认证
-
-![](https://i.loli.net/2021/02/18/iO2cCXNGvLsptnh.png)
-
-<img src="https://i.loli.net/2021/02/18/OIt4FbsUwqV8gZL.png" style="zoom:38%;" />
 
 #### 商品详情
 
@@ -37,50 +32,12 @@
 
 #### ![](https://i.loli.net/2021/02/18/T3mVbdpfqKsrNJC.png)支付
 
-![](https://i.loli.net/2021/02/18/SvP1oUVmrnx8cET.png)
-
-![](https://i.loli.net/2021/02/18/QqWzVtk1ZwvrURl.png)
-
-![](https://i.loli.net/2021/02/18/jfKRiLH4trSpwYe.png)
-
-
 
 ### 后台管理系统
 
 #### 登录
 
 ![](https://i.loli.net/2021/02/18/6KVEbFZMrgnUet3.png)
-
-#### 商品系统
-
-**分类管理**
-
-![](https://i.loli.net/2021/02/18/gsTcQRKDEWnUzIY.png)
-
-**品牌管理**
-
-![](https://i.loli.net/2021/02/18/FCKNfMTs9Pt3oVj.png)**平台属性**
-
-![ss](https://i.loli.net/2021/02/18/vCSnt1KjOyghB57.png)
-
-**商品管理**
-
-![](https://i.loli.net/2021/02/18/H6YkoCVOLQyfBN7.png)
-
-**发布商品**
-
-![](https://i.loli.net/2021/02/18/I1WtlCAb9hHUwky.png)
-
-#### 其他系统
-
-<div>
-     <img src="docs/images/Snipaste_2021-02-18_16-58-44.png" style="zoom:40%;" />
-    <img src="docs/images/Snipaste_2021-02-18_16-47-40.png" style="zoom:40%;" />
-    <img src="docs/images/Snipaste_2021-02-18_16-57-06.png" style="zoom:50%;" />
-    <img src="docs/images/Snipaste_2021-02-18_16-57-43.png" style="zoom:50%;" />
-    <img src="docs/images/Snipaste_2021-02-18_16-57-58.png" style="zoom:50%;" />
-</div>
-
 
 
 ## 组织结构
@@ -120,24 +77,6 @@ gmall
 |       Docker       |       应用容器引擎       |             https://www.docker.com              |
 |        OSS         |        对象云存储        |  https://github.com/aliyun/aliyun-oss-java-sdk  |
 
-### 前端技术
-
-|   技术    |    说明    |           官网            |
-| :-------: | :--------: | :-----------------------: |
-|    Vue    |  前端框架  |     https://vuejs.org     |
-|  Element  | 前端UI框架 | https://element.eleme.io  |
-| thymeleaf |  模板引擎  | https://www.thymeleaf.org |
-|  node.js  | 服务端的js |   https://nodejs.org/en   |
-
-## 架构图
-
-### 系统架构图
-
-![](https://i.loli.net/2021/02/18/zMrSWaAfbqYoF4t.png)
-
-### 业务架构图
-
-![](https://i.loli.net/2021/02/18/yBjlqvsCgpVkENc.png)
 
 ## 环境搭建
 
@@ -153,7 +92,7 @@ gmall
 | PowerDesigner |   数据库设计工具    |             http://powerdesigner.de             |
 |    Postman    |   API接口调试工具   |             https://www.postman.com             |
 |    Jmeter     |    性能压测工具     |            https://jmeter.apache.org            |
-|    Typora     |   Markdown编辑器    |                https://typora.io                |
+
 
 ### 开发环境
 
@@ -167,7 +106,6 @@ gmall
 |   RabbitMQ    | 3.8.5  |            http://www.rabbitmq.com/download.html             |
 |     Nginx     | 1.1.6  |              http://nginx.org/en/download.html               |
 
-注意：以上的除了jdk都是采用docker方式进行安装，详细安装步骤可参考百度!!!
 
 ### 搭建步骤
 
@@ -176,30 +114,29 @@ gmall
 - 修改本机的host文件，映射域名端口至Nginx地址
 
 ```
-192.168.56.102	gulimall.com
-192.168.56.102	search.gulimall.com
-192.168.56.102  item.gulimall.com
-192.168.56.102  auth.gulimall.com
-192.168.56.102  cart.gulimall.com
-192.168.56.102  order.gulimall.com
-192.168.56.102  member.gulimall.com
-192.168.56.102  seckill.gulimall.com
-以上ip换成自己Linux的ip地址
+192.168.129.114	gmall.com
+192.168.129.114	search.gmall.com
+192.168.129.114  item.gmall.com
+192.168.129.114 auth.gmall.com
+192.168.129.114 cart.gmall.com
+192.168.129.114  order.gmall.com
+192.168.129.114  member.gmall.com
+192.168.129.114  seckill.gmall.com
 ```
 
 - 修改Linux中Nginx的配置文件
 
 ```shell
 1、在nginx.conf中添加负载均衡的配置   
-upstream gulimall{
+upstream gmall{
 	# 网关的地址
-	server 192.168.56.1:88;
+	server 192.168.114.1:88;
 }    
-2、在gulimall.conf中添加如下配置
+2、在gmall.conf中添加如下配置
 server {
 	# 监听以下域名地址的80端口
     listen       80;
-    server_name  gulimall.com  *.gulimall.com hjl.mynatapp.cc;
+    server_name  gmall.com  *.gmall.com;
 
     #charset koi8-r;
     #access_log  /var/log/nginx/log/host.access.log  main;
@@ -211,19 +148,14 @@ server {
 
     #支付异步回调的一个配置
     location /payed/ {
-        proxy_set_header Host order.gulimall.com;        #不让请求头丢失
-        proxy_pass http://gulimall;
+        proxy_set_header Host order.gmall.com;        #不让请求头丢失
+        proxy_pass http://gmall;
     }
 
     location / {
         #root   /usr/share/nginx/html;
         #index  index.html index.htm;
         proxy_set_header Host $host;        #不让请求头丢失
-        proxy_pass http://gulimall;
+        proxy_pass http://gmall;
     }
 ```
-
-或者直接用项目nginx模块替换本机nginx配置目录文件
-
-- 克隆前端项目 `renren-fast-vue` 以 `npm run dev` 方式去运行
-- 克隆整个后端项目 `gulimall` ，并导入 IDEA 中完成编译

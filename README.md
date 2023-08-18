@@ -94,35 +94,17 @@ gmall
 - 修改Linux中Nginx的配置文件
 
 ```shell
-1、在nginx.conf中添加负载均衡的配置   
-upstream gmall{
-	# 网关的地址
-	server 192.168.114.1:88;
-}    
-2、在gmall.conf中添加如下配置
 server {
-	# 监听以下域名地址的80端口
-    listen       80;
-    server_name  gmall.com  *.gmall.com;
-
-    #charset koi8-r;
-    #access_log  /var/log/nginx/log/host.access.log  main;
-
-    #配置静态资源分离
-    location /static/ {
-        root   /usr/share/nginx/html;
-    }
-
-    #支付异步回调的一个配置
-    location /payed/ {
-        proxy_set_header Host order.gmall.com;        #不让请求头丢失
-        proxy_pass http://gmall;
-    }
+    listen       80;// 监听80端口
+    server_name  gmall.com;// 监听的请求host，如果是gulimall.com则接收请求
 
     location / {
-        #root   /usr/share/nginx/html;
-        #index  index.html index.htm;
-        proxy_set_header Host $host;        #不让请求头丢失
-        proxy_pass http://gmall;
+    	proxy_pass http://192.168.114.129:10000;// 将请求转发给商品服务
     }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
 ```

@@ -106,5 +106,20 @@ server {
     location = /50x.html {
         root   /usr/share/nginx/html;
     }
+http {
+    upstream gmall {// 上游服务器名
+        server 192.168.114.129:88;// 负载均衡时配置多个网关地址
+        server 192.168.114.129:89;
+    }
+
+    server {
+        listen 80;
+        server_name gmall.com;
+
+        location / {
+            proxy_pass http://gmall;// 代理给上游服务器
+        }
+    }
+}
 }
 ```
